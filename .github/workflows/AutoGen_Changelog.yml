@@ -39,7 +39,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build Changelog based on Commits (and append below)
         run: |
-         gren changelog --generate --override --changelog-filename=RELEASE_NOTES_Commits.md --repo=mwc-qt-wallet -T $GREN_TOKEN -D commits -c ./.github/workflows/.commitbased_config.js -C "Autogenerate Changelog"
+         gren changelog --generate --override --changelog-filename=RELEASE_NOTES_Commits.md --repo=mwc-qt-wallet -T $GREN_TOKEN -D commits -c ./.github/workflows/.changelog_config.js -C "Autogenerate Changelog"
          
         env:
           #This accesses a secret Env Variable stored for this Repo. Needs to contain a "Personal access token" for "Repo" Scope that has access. (A Dev can create this token himself - only works if he has access to the repo obviously) 
